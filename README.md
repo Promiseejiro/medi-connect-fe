@@ -4,7 +4,7 @@ Next.js customer application integrated with the MediConnect NestJS + MongoDB AP
 
 ## API configuration
 
-Copy `.env.example` to `.env.local`:
+Copy `.env.example` to `.env.local`
 
 ```env
 NEXT_PUBLIC_MEDICONNECT_API_URL=http://localhost:3000/api/v1
