@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function PaymentCancel(){return <div className="mx-auto max-w-2xl px-5 py-24 text-center"><h1 className="text-3xl font-bold text-[#153d30]">Payment was not completed</h1><p className="mt-3 text-sm leading-7 text-slate-500">Your appointment may remain pending payment. You can return to your appointments and try again.</p><Link href="/appointments" className="mt-7 inline-block rounded-xl bg-[#123f32] px-6 py-3 text-sm font-bold text-white">Return to appointments</Link></div>}
