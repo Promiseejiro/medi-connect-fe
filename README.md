@@ -7,7 +7,7 @@ Next.js customer application integrated with the MediConnect NestJS + MongoDB AP
 Copy `.env.example` to `.env.local`
 
 ```env
-NEXT_PUBLIC_MEDICONNECT_API_URL=http://localhost:3000/api/v1
+NEXT_PUBLIC_MEDICONNECT_API_URL=http://localhost:3000/api/v
 ```
 
 The API base URL must include `/api/v1`. Swagger is available at `http://localhost:3000/api-docs`.
