@@ -80,7 +80,7 @@ function normalizeService(item: AnyRecord): DoctorService {
     name: item.name ?? item.serviceName ?? '',
     description: item.description ?? '',
     price: Number(item.price ?? item.amount ?? 0),
-    currency: item.currency ?? 'NGN',
+    currency: 'USD',
     durationMinutes: Number(
       item.durationMinutes ?? item.duration ?? 30,
     ),
@@ -186,9 +186,7 @@ function normalizeAppointment(item: AnyRecord): Appointment {
     ),
 
     currencySnapshot:
-      item.currencySnapshot ??
-      service?.currency ??
-      'NGN',
+      'USD',
 
     paymentRequired:
       item.paymentRequired ??
@@ -754,17 +752,15 @@ export function getRole(): Role | null {
 
 export function money(
   amount: number,
-  currency = 'NGN',
+  _currency = 'USD',
 ) {
   try {
-    return new Intl.NumberFormat('en-NG', {
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
-      currency: currency || 'NGN',
+      currency: 'USD',
     }).format(Number(amount || 0));
   } catch {
-    return `${currency || 'NGN'} ${Number(
-      amount || 0,
-    ).toLocaleString()}`;
+    return `$${Number(amount || 0).toLocaleString('en-US')}`;
   }
 }
 
